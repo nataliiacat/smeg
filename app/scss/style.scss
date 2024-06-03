@@ -3,5 +3,68 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 36px;
+  }
+
+  &__list-link {
+    letter-spacing: -1.2px;
+    color: $title;
+    transition: all .2s;
+    @extend %montserrat-500;
+    &:hover {
+      border-bottom: 1px solid $accent;
+      color: $accent;
+      padding-bottom: 4px;
+      @extend %montserrat-500;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link+.user-nav__link {
+    padding-left: 20px;
+  }
+
+  &__num{
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $accent;
+    top:-9px;
+    right: -9px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+
+
 
 @import 'media';
