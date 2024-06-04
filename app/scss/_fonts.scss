@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Montserrat-MediumItalic', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  src: local('Montserrat-MediumItalic'), 
+    url('../fonts/Montserrat-MediumItalic.woff2')format('woff2'),
+    url('../fonts/Montserrat-MediumItalic.woff')format('woff'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat-BoldItalic', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  src: local('Montserrat-BoldItalic'),
+    url('../fonts/Montserrat-BoldItalic.woff2')format('woff2'),
+    url('../fonts/Montserrat-BoldItalic.woff')format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald-Light', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: local('Oswald-Light'),
+    url('../fonts/Oswald-Light.woff2')format('woff2'),
+    url('../fonts/Oswald-Light.woff')format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald-ExtraLight', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Oswald-ExtraLight'),
+    url('../fonts/Oswald-ExtraLight.woff2')format('woff2'),
+    url('../fonts/Oswald-ExtraLight.woff')format('woff');
+  font-display: swap;
+}
