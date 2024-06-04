@@ -3,8 +3,10 @@
 @import 'reset';
 @import 'global';
 
+
+
 .header {
-  padding: 40px;
+  padding: 20px 0 10px 0;
 
   &__inner {
     display: flex;
@@ -16,8 +18,10 @@
 .menu {
   &__list {
     line-height: 36px;
+    font-size: 26px;
     display: flex;
     align-items: center;
+    
   }
 
   &__list-item+.menu__list-item {
@@ -25,10 +29,11 @@
   }
 
   &__list-link {
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
     color: $title;
     transition: all .2s;
     @extend %montserrat-500;
+
     &:hover {
       border-bottom: 1px solid $accent;
       color: $accent;
@@ -36,6 +41,7 @@
       @extend %montserrat-500;
     }
   }
+       
 }
 
 .user-nav {
@@ -49,13 +55,13 @@
     padding-left: 20px;
   }
 
-  &__num{
-    position:absolute;
+  &__num {
+    position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: $accent;
-    top:-9px;
+    top: -9px;
     right: -9px;
     font-size: 20px;
     color: #fff;
@@ -64,7 +70,92 @@
   }
 }
 
+footer {
+  background-color: $bg;
+}
 
+.footer__inner {
+  padding: 30px 0 20px;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+}
 
+.footer {
+  &__contact {
+    width: 250px;
+    margin-left: 110px;
+  }
+
+  &__subscription {
+    max-width: 500px;
+  }
+
+  &__nav {
+    width: 240px;
+    margin-left: 120px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    color: $accent;
+    font-size: 18px;
+    line-height: 1; 
+    font-weight: bold;
+    @extend %montserrat-500;
+  }
+
+  &__title-subscription {
+    margin: 30px 0 10px;
+    color: $default;
+   
+  }
+
+  &__inner__item,
+  &__info-list,
+  &__adress,
+  &__email,
+  &__phone {
+    line-height: 36px;
+    display: block;
+  }
+
+  &__social-list {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  &__social-item+.footer__social-item {
+    padding-left: 20px;
+  }
+  &__form{
+    margin-top: 10px;
+  }
+  &__form-input{
+background-color: #fff;
+max-width: 350px;
+max-height: 40px;
+width: 100%;
+border: none;
+padding: 12px 10px 12px 15px;
+box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+&::placeholder{
+  color: $default;
+  font-size: 16px;
+}
+  }
+  &__form-btn{
+ border: none;
+ background-color: $accent;
+ color: #fff;
+ text-transform: uppercase;
+ padding: 1px 10px;
+box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+  }
+
+}
+
+ 
+ 
 
 @import 'media';
