@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -21,7 +22,7 @@
     font-size: 26px;
     display: flex;
     align-items: center;
-    
+
   }
 
   &__list-item+.menu__list-item {
@@ -41,7 +42,6 @@
       @extend %montserrat-500;
     }
   }
-       
 }
 
 .user-nav {
@@ -100,7 +100,7 @@ footer {
     letter-spacing: 1.5px;
     color: $accent;
     font-size: 18px;
-    line-height: 1; 
+    line-height: 1;
     font-weight: bold;
     @extend %montserrat-500;
   }
@@ -108,7 +108,6 @@ footer {
   &__title-subscription {
     margin: 30px 0 10px;
     color: $default;
-   
   }
 
   &__inner__item,
@@ -128,34 +127,110 @@ footer {
   &__social-item+.footer__social-item {
     padding-left: 20px;
   }
-  &__form{
+
+  &__form {
     margin-top: 10px;
   }
-  &__form-input{
-background-color: #fff;
-max-width: 350px;
-max-height: 40px;
-width: 100%;
-border: none;
-padding: 12px 10px 12px 15px;
-box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
-&::placeholder{
-  color: $default;
-  font-size: 16px;
-}
-  }
-  &__form-btn{
- border: none;
- background-color: $accent;
- color: #fff;
- text-transform: uppercase;
- padding: 1px 10px;
-box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+
+  &__form-input {
+    background-color: #fff;
+    max-width: 350px;
+    max-height: 40px;
+    width: 100%;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+
+    &::placeholder {
+      color: $default;
+      font-size: 16px;
+    }
   }
 
+  &__form-btn {
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1px 10px;
+    box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+  }
 }
 
- 
- 
+.top-slider {
+  &__item {
+    background-position: center center;
+    background-size: cover;
+    min-height: calc(100vh - 85px);
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 30px;
+    @extend %montserrat-500;
+    margin: 30px auto 40px auto;
+    letter-spacing: 1.7px;
+  }
+
+  &__title {
+    font-size: 48px;
+    @extend %montserrat-700;
+    letter-spacing: 2px;
+    line-height: 50px;
+  }
+
+  &__link {
+    transition: all .5s;
+    letter-spacing: 1px;
+    @extend %oswald-500;
+
+    &:hover {
+      letter-spacing: 7px;
+    }
+  }
+
+  &__small-appliances {
+    display: block;
+    margin: 100px auto 0 auto;
+    height: 200px;
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  &__text__small-appliances {
+    max-width: 700px;
+  }
+
+  &__kettle {
+    margin: 250px 0 0 80px;
+    max-width: 650px;
+  }
+
+  &__dolcegabbana {
+    display: block;
+    margin: 100px auto 0 auto;
+    height: 200px;
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  &__multicooking-box {
+    margin: 210px 0 0 0px;
+    max-width: 600px;
+    color: $line;
+
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__link__multicooking {
+    color: $line;
+  }
+}
+
+
+
 
 @import 'media';
