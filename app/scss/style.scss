@@ -91,7 +91,7 @@ footer {
   }
 
   &__nav {
-    width: 240px;
+    width: 235px;
     margin-left: 120px;
   }
 
@@ -125,7 +125,7 @@ footer {
   }
 
   &__social-item+.footer__social-item {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   &__form {
@@ -325,6 +325,42 @@ footer {
   }
 }
 
+.news {
+margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.news-slider {
+  text-align: center;
+  &__box {
+    max-width: 420px;
+    height: auto;
+    margin-top: 20px;
+    transform: all .9s;
+
+    &:hover {
+      box-shadow: 1px 1px 20px $default;
+      max-width: 450px;
+    }
+  }
+  p{
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  &__link{
+    letter-spacing: 6px;
+  }
+}
+
+.subtitle {
+  letter-spacing: 3px;
+  margin: 15px 0 20px 0;
+}
 
 
 @import 'media';

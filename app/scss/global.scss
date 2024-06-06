@@ -5,7 +5,7 @@ body {
 
 body {
   color: $default;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   @extend %oswald-400;
   letter-spacing: 2px;
@@ -46,4 +46,7 @@ a {
   &:hover {
     letter-spacing: 7px;
   }
+}
+.text{
+  font-size: 20px;
 }
