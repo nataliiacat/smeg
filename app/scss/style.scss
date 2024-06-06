@@ -230,6 +230,46 @@ footer {
   }
 }
 
+.catalogs {
+  &__inner {
+    margin: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0 70px 0 70px;
+
+    &:hover {
+      background-color: $bg;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    letter-spacing: 1.7px;
+    line-height: 50px;
+    font-size: 36px;
+
+  }
+
+  &__subtitle {
+    letter-spacing: 2px;
+  }
+
+  &__img {
+    transition: all .5s;
+    display: block;
+    margin: 20px auto 10px auto;
+
+    &:hover {
+      filter: drop-shadow(1px 1px 30px rgb(57, 57, 57));
+      padding-top: -40px;
+    }
+  }
+}
 
 
 
