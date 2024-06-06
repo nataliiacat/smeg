@@ -1,20 +1,23 @@
 html,
-body{
-height: 100%;
+body {
+  height: 100%;
 }
 
 body {
   color: $default;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 26px;
   @extend %oswald-400;
+  letter-spacing: 2px;
   display: flex;
   flex-direction: column;
 }
-.main{
+
+.main {
   flex-grow: 1;
 
 }
+
 .container {
   max-width: 1580px;
   margin: 0 auto;
@@ -27,8 +30,20 @@ a {
   line-height: 26px;
   @extend %oswald-400;
 }
+
 .title {
   font-size: 48px;
   @extend %montserrat-700;
   letter-spacing: 2px;
-  line-height: 50px;}
+  line-height: 50px;
+}
+
+.link {
+  transition: all .5s;
+  letter-spacing: 1px;
+  @extend %oswald-500;
+
+  &:hover {
+    letter-spacing: 7px;
+  }
+}
