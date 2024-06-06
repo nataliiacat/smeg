@@ -172,8 +172,6 @@ footer {
     letter-spacing: 1.7px;
   }
 
-
-
   &__small-appliances {
     display: block;
     margin: 100px auto 0 auto;
@@ -237,7 +235,6 @@ footer {
     letter-spacing: 1.7px;
     line-height: 50px;
     font-size: 36px;
-
   }
 
   &__subtitle {
@@ -271,8 +268,6 @@ footer {
   &__text {
     margin: 20px 0 20px;
     max-width: 500px;
-
-
   }
 }
 
@@ -326,7 +321,8 @@ footer {
 }
 
 .news {
-margin-bottom: 100px;
+  margin-bottom: 50px;
+
   &__inner {
     display: flex;
     margin: 20px 0;
@@ -337,22 +333,25 @@ margin-bottom: 100px;
 
 .news-slider {
   text-align: center;
+
   &__box {
+    display: block;
     max-width: 420px;
-    height: auto;
+    height: 580;
     margin-top: 20px;
-    transform: all .9s;
+    transform: all .1s;
 
     &:hover {
-      box-shadow: 1px 1px 20px $default;
-      max-width: 450px;
+      border: 1rem solid #fff;
     }
   }
-  p{
+
+  p {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 15px;
   }
-  &__link{
+
+  &__link {
     letter-spacing: 6px;
   }
 }
@@ -362,5 +361,25 @@ margin-bottom: 100px;
   margin: 15px 0 20px 0;
 }
 
+.info-top {
+  background-color: $bg;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-left: 15px;
+
+  }
+}
 
 @import 'media';
