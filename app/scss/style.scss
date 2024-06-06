@@ -172,7 +172,7 @@ footer {
     letter-spacing: 1.7px;
   }
 
- 
+
 
   &__small-appliances {
     display: block;
@@ -255,50 +255,74 @@ footer {
     }
   }
 }
-.about-us{
+
+.about-us {
   background-color: $bg;
   background-image: url(../images/src/bg_header_refrigetor.jpg);
   background-repeat: no-repeat;
   background-size: 47%;
-  &__inner{
+
+  &__inner {
     max-width: 700px;
     margin-left: auto;
     padding: 50px 0 200px;
   }
-  &__text{
+
+  &__text {
     margin: 20px 0 20px;
     max-width: 500px;
-    
-  
+
+
   }
 }
-.collection{
-   &__content {
-      padding-top: 100px;
-      max-width: 500px;
-    
-    }
-    &__text{
-      padding: 30px 0;
 
-    }
-  &__inner{
+.collection {
+  &__content {
+    padding-top: 100px;
+    max-width: 500px;
+
+  }
+
+  &__text {
+    padding: 30px 0;
+
+  }
+
+  &__inner {
     display: flex;
- justify-content: space-between;
- margin-left: 300px;
+    justify-content: space-between;
+    margin-left: 300px;
   }
-&__video{
-  position: relative;
 
-  &__item{
-    top: 0;
-    left: 0;
-    max-width: 960px;
-  max-height: 540px;
-  flex-direction: column;
- 
+  &__video {
+    position: relative;
+
+    &__item {
+      top: 0;
+      left: 0;
+      max-width: 960px;
+      max-height: 540px;
+      flex-direction: column;
+
+    }
   }
 }
+
+.blender {
+  background-color: $bg;
+  background-image: url(../images/src/blendr.jpg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+
+  &__inner {
+    max-width: 600px;
+    margin-left: auto;
+    padding: 50px 0 200px;
+  }
+
+  &__text {
+    margin: 40px 0 20px;
+  }
 }
 
 
