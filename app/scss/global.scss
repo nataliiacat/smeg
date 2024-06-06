@@ -27,3 +27,8 @@ a {
   line-height: 26px;
   @extend %oswald-400;
 }
+.title {
+  font-size: 48px;
+  @extend %montserrat-700;
+  letter-spacing: 2px;
+  line-height: 50px;}
