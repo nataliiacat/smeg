@@ -213,6 +213,65 @@ footer {
   }
 }
 
+.promo {
+  background-color: $bg;
+  background-image: url('../images/src/cookware.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  padding: 100px 0 150px;
+  text-align: center;
+
+  &__inner {
+    max-width: 600px;
+    height: 290px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__title {
+    color: $accent;
+    font-size: 55px;
+    letter-spacing: 5px;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+&__clock{
+display: flex;
+justify-content: space-between;
+margin:50px 0 50px 0;
+
+}
+&__clock-item{
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+&__time{
+  font-size: 48px;
+  @extend %montserrat-700;
+  margin: 10px 0 7px;
+}
+
+&__link{
+  text-transform: uppercase;
+  color: $title;
+  display: inline-block;
+  border: 1px solid $accent;
+  padding: 15px 25px;
+}
+
+
+}
+
 .catalogs {
   &__inner {
     margin: 40px 0 40px 0;
