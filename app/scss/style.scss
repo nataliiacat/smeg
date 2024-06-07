@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -21,7 +22,7 @@
     font-size: 26px;
     display: flex;
     align-items: center;
-    
+
   }
 
   &__list-item+.menu__list-item {
@@ -41,7 +42,6 @@
       @extend %montserrat-500;
     }
   }
-       
 }
 
 .user-nav {
@@ -91,7 +91,7 @@ footer {
   }
 
   &__nav {
-    width: 240px;
+    width: 235px;
     margin-left: 120px;
   }
 
@@ -100,7 +100,7 @@ footer {
     letter-spacing: 1.5px;
     color: $accent;
     font-size: 18px;
-    line-height: 1; 
+    line-height: 1;
     font-weight: bold;
     @extend %montserrat-500;
   }
@@ -108,7 +108,6 @@ footer {
   &__title-subscription {
     margin: 30px 0 10px;
     color: $default;
-   
   }
 
   &__inner__item,
@@ -126,36 +125,260 @@ footer {
   }
 
   &__social-item+.footer__social-item {
-    padding-left: 20px;
+    padding-left: 10px;
   }
-  &__form{
+
+  &__form {
     margin-top: 10px;
   }
-  &__form-input{
-background-color: #fff;
-max-width: 350px;
-max-height: 40px;
-width: 100%;
-border: none;
-padding: 12px 10px 12px 15px;
-box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
-&::placeholder{
-  color: $default;
-  font-size: 16px;
-}
-  }
-  &__form-btn{
- border: none;
- background-color: $accent;
- color: #fff;
- text-transform: uppercase;
- padding: 1px 10px;
-box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+
+  &__form-input {
+    background-color: #fff;
+    max-width: 300px;
+    max-height: 40px;
+    width: 100%;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+
+    &::placeholder {
+      color: $default;
+      font-size: 16px;
+    }
   }
 
+  &__form-btn {
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1px 10px;
+    box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
+  }
 }
 
- 
- 
+.top-slider {
+  &__item {
+    background-position: center center;
+    background-size: cover;
+    min-height: calc(100vh - 85px);
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 30px;
+    @extend %montserrat-500;
+    margin: 30px auto 40px auto;
+    letter-spacing: 1.7px;
+  }
+
+  &__small-appliances {
+    display: block;
+    margin: 100px auto 0 auto;
+    height: 200px;
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  &__text__small-appliances {
+    max-width: 700px;
+  }
+
+  &__kettle {
+    margin: 250px 0 0 80px;
+    max-width: 650px;
+  }
+
+  &__dolcegabbana {
+    display: block;
+    margin: 100px auto 0 auto;
+    height: 200px;
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  &__multicooking-box {
+    margin: 210px 0 0 0px;
+    max-width: 600px;
+    color: $line;
+
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__link__multicooking {
+    color: $line;
+  }
+}
+
+.catalogs {
+  &__inner {
+    margin: 40px 0 40px 0;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0 70px 0 70px;
+
+    &:hover {
+      background-color: $bg;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    letter-spacing: 1.7px;
+    line-height: 50px;
+    font-size: 36px;
+  }
+
+  &__subtitle {
+    letter-spacing: 2px;
+  }
+
+  &__img {
+    transition: all .5s;
+    display: block;
+    margin: 20px auto 10px auto;
+
+    &:hover {
+      filter: drop-shadow(1px 1px 30px rgb(57, 57, 57));
+      padding-top: -40px;
+    }
+  }
+}
+
+.about-us {
+  background-color: $bg;
+  background-image: url(../images/src/bg_header_refrigetor.jpg);
+  background-repeat: no-repeat;
+  background-size: 47%;
+
+  &__inner {
+    max-width: 700px;
+    margin-left: auto;
+    padding: 50px 0 200px;
+  }
+
+  &__text {
+    margin: 20px 0 20px;
+    max-width: 500px;
+  }
+}
+
+.collection {
+  &__content {
+    padding-top: 100px;
+    max-width: 500px;
+
+  }
+
+  &__text {
+    padding: 30px 0;
+
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+  }
+
+  &__video {
+    position: relative;
+
+    &__item {
+      top: 0;
+      left: 0;
+      max-width: 960px;
+      max-height: 540px;
+      flex-direction: column;
+    }
+  }
+}
+
+.blender {
+  background-color: $bg;
+  background-image: url(../images/src/blendr.jpg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+
+  &__inner {
+    max-width: 600px;
+    margin-left: auto;
+    padding: 50px 0 200px;
+  }
+
+  &__text {
+    margin: 40px 0 20px;
+  }
+}
+
+.news {
+  margin-bottom: 50px;
+
+  &__inner {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.news-slider {
+  text-align: center;
+
+  &__box {
+    display: block;
+    max-width: 420px;
+    height: 580;
+    margin-top: 20px;
+    transform: all .1s;
+
+    &:hover {
+      border: 1rem solid #fff;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  &__link {
+    letter-spacing: 6px;
+  }
+}
+
+.subtitle {
+  letter-spacing: 3px;
+  margin: 15px 0 20px 0;
+}
+
+.info-top {
+  background-color: $bg;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-left: 15px;
+
+  }
+}
 
 @import 'media';
