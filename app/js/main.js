@@ -3,7 +3,7 @@ $(function () {
     dots: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 1000
   })
 
   $('.news-slider').slick({
@@ -13,7 +13,6 @@ $(function () {
     loop:false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000,
-
+    autoplaySpeed: 2000
   });
 })
