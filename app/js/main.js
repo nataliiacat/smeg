@@ -29,6 +29,13 @@ $(function () {
       seconds
     };
   }
+  $(".star").rateYo({
+
+    starWidth: "17px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true
+  });
 
   function initializeClock(id, endtime) {
     const clock = document.querySelector('.promo__clock');
@@ -56,4 +63,6 @@ $(function () {
 
   const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
+
+
 })
