@@ -1,4 +1,36 @@
 $(function () {
+  $('.product-slider__thumb').slick({
+    asNavFor: '.product-slider__big',
+    focusOnSelect: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+
+  });
+
+  $('.product-slider__big').slick({
+    asNavFor: '.product-slider__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+
+    },
+
+  })
   $('.top-slider__inner').slick({
     dots: false,
     arrows: false,
