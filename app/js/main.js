@@ -32,10 +32,10 @@ $(function () {
 
   })
   $('.top-slider__inner').slick({
-    dots: false,
+    dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000
+    autoplaySpeed: 3000
   })
 
   $('.news-slider').slick({

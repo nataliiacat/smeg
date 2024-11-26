@@ -4,10 +4,9 @@ body {
 }
 
 body {
-  color: $default;
-  font-size: 16px;
+ color: #101010;
+   font-size: 16px;
   line-height: 26px;
-  @extend %oswald-400;
   letter-spacing: 2px;
   display: flex;
   flex-direction: column;
@@ -25,23 +24,22 @@ body {
 }
 
 a {
-  color: $default;
+  color: #101010;
   font-size: 16px;
   line-height: 26px;
-  @extend %oswald-400;
 }
 
 .title {
   font-size: 48px;
-  @extend %montserrat-700;
   letter-spacing: 2px;
   line-height: 50px;
+  color: #101010;
 }
 
 .link {
   transition: all .5s;
   letter-spacing: 1px;
-  @extend %oswald-500;
+  color: #101010;
 
   &:hover {
     letter-spacing: 7px;
@@ -49,4 +47,10 @@ a {
 }
 .text{
   font-size: 20px;
+  color: #101010;
+}
+header{
+  position: fixed;
+    z-index: 999;
+    background-color: #fff;
 }

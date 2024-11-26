@@ -1,8 +1,8 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@use 'vars'  as *;
+@use 'fonts' as *;
+@use 'reset' as *;
+@use 'libs'  as *;
+@use 'global' as *;
 
 
 
@@ -19,7 +19,7 @@
 .menu {
   &__list {
     line-height: 36px;
-    font-size: 26px;
+    font-size: 24px;
     display: flex;
     align-items: center;
 
@@ -31,47 +31,103 @@
 
   &__list-link {
     letter-spacing: -1px;
-    color: $title;
+    color: #181515;
     transition: all .2s;
-    @extend %montserrat-500;
 
     &:hover {
-      border-bottom: 1px solid $accent;
-      color: $accent;
+      border-bottom: 1px solid #e80000;
+      color: #e80000;
       padding-bottom: 4px;
-      @extend %montserrat-500;
     }
   }
 }
 
-.user-nav {
+.slick-dots {
+  list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &__link {
-    position: relative;
-  }
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 
-  &__link+.user-nav__link {
-    padding-left: 20px;
-  }
+  li {
+    margin: 0 8px;
 
-  &__num {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: $accent;
-    top: -9px;
-    right: -9px;
-    font-size: 20px;
-    color: #fff;
-    line-height: 30px;
-    text-align: center;
+    button {
+      width: 14px; 
+      height: 14px;
+      background-color: #fff;
+      border: none;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+     
+    }
+
+    &.slick-active button {
+      background-color: #000; 
+      transition: all 0.3s ease;
+
+      
+      
+    }
   }
 }
+.user-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; 
+    position: relative;
+    &:hover {
+      color: #c6c6c6;
+    }
+
+    i {
+      font-size: 30px; 
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+        +span{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+    &__num {
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 16px;
+      color: #dedede; 
+      background-color: #e80000;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      margin: -18px  0 0 -18px;
+      transition: transform 0.1s;
+
+
+    }
+  }
+
+
 
 footer {
-  background-color: $bg;
+  background-color: #dedede;
+  color: #101010;
 }
 
 .footer__inner {
@@ -98,16 +154,15 @@ footer {
   &__title {
     margin-bottom: 20px;
     letter-spacing: 1.5px;
-    color: $accent;
+    color: #e80000;
     font-size: 18px;
     line-height: 1;
     font-weight: bold;
-    @extend %montserrat-500;
   }
 
   &__title-subscription {
     margin: 30px 0 10px;
-    color: $default;
+    color: #101010;
   }
 
   &__inner__item,
@@ -121,12 +176,13 @@ footer {
 
   &__social-list {
     display: flex;
-    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+    width: 14px;
+    height: 14px;
   }
 
-  &__social-item+.footer__social-item {
-    padding-left: 10px;
-  }
+ 
 
   &__form {
     margin-top: 10px;
@@ -142,14 +198,14 @@ footer {
     box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
 
     &::placeholder {
-      color: $default;
+      color: #c6c6c6;
       font-size: 16px;
     }
   }
 
   &__form-btn {
     border: none;
-    background-color: $accent;
+    background-color: #e80000;
     color: #fff;
     text-transform: uppercase;
     padding: 1px 10px;
@@ -161,13 +217,13 @@ footer {
   &__item {
     background-position: center center;
     background-size: cover;
+    width: 100%;
     min-height: calc(100vh - 85px);
   }
 
   &__text {
     font-size: 24px;
     line-height: 30px;
-    @extend %montserrat-500;
     margin: 30px auto 40px auto;
     letter-spacing: 1.7px;
   }
@@ -176,7 +232,7 @@ footer {
     display: block;
     margin: 100px auto 0 auto;
     height: 200px;
-    max-width: 1100px;
+    max-width: 1200px;
     text-align: center;
   }
 
@@ -200,7 +256,7 @@ footer {
   &__multicooking-box {
     margin: 210px 0 0 0px;
     max-width: 600px;
-    color: $line;
+    color: #d6d6d6;
 
   }
 
@@ -209,12 +265,47 @@ footer {
   }
 
   &__link__multicooking {
-    color: $line;
+    color: #d6d6d6;
   }
 }
 
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  li {
+    margin: 0 8px;
+
+    button {
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      border: none;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+    }
+
+    &.slick-active button {
+      background-color: #c6c6c6;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+
 .promo {
-  background-color: $bg;
+  background-color: #dedede;
   background-image: url('../images/src/cookware.jpg');
   background-repeat: no-repeat;
   background-size: 50%;
@@ -229,7 +320,7 @@ footer {
   }
 
   &__title {
-    color: $accent;
+    color: #e80000;
     font-size: 55px;
     letter-spacing: 5px;
   }
@@ -259,16 +350,19 @@ footer {
 
   &__time {
     font-size: 48px;
-    @extend %montserrat-700;
-    margin: 10px 0 7px;
+    margin: 10px 0 7px
   }
 
   &__link {
     text-transform: uppercase;
-    color: $title;
+    color: #181515;
     display: inline-block;
-    border: 1px solid $accent;
+    border: 1px solid #e80000;
     padding: 15px 25px;
+    &:hover{
+color: #dedede;
+background-color: #e80000;
+    }
   }
 
 
@@ -284,12 +378,8 @@ footer {
 
   &__item {
     text-align: center;
-    padding: 0 70px 0 70px;
-
-    &:hover {
-      background-color: $bg;
-    }
-  }
+    padding: 0 70px;
+}
 
   &__title {
     margin-top: 10px;
@@ -315,7 +405,7 @@ footer {
 }
 
 .about-us {
-  background-color: $bg;
+  background-color: #dedede;
   background-image: url(../images/src/bg_header_refrigetor.jpg);
   background-repeat: no-repeat;
   background-size: 47%;
@@ -365,7 +455,7 @@ footer {
 }
 
 .blender {
-  background-color: $bg;
+  background-color: #dedede;
   background-image: url(../images/src/blendr.jpg);
   background-repeat: no-repeat;
   background-size: 55%;
@@ -393,6 +483,7 @@ footer {
 }
 
 .news-slider {
+  padding-bottom: 50px;
   text-align: center;
 
   &__box {
@@ -423,7 +514,7 @@ footer {
 }
 
 .info-top {
-  background-color: $bg;
+  background-color: #dedede;
 
   &__inner {
     display: flex;
@@ -457,17 +548,16 @@ footer {
   }
 
   &__link {
-    color: $default;
+    color: #c6c6c6;
     font-size: 22px;
     line-height: 26px;
-    @extend%montserrat-500;
     text-transform: uppercase;
     margin: 0 30px;
   }
 
   &__link--active {
-    color: $accent;
-    border-bottom: 1px solid $accent;
+    color: #e80000;
+    border-bottom: 1px solid #e80000;
   }
 
   &__label {
@@ -477,10 +567,9 @@ footer {
 
   &__text {
     text-align: center;
-    color: $default;
+    color: #c6c6c6;
     font-size: 16px;
     line-height: 16px;
-    @extend%montserrat-500;
     margin: 20px 0;
     letter-spacing: 4px;
   }
@@ -489,7 +578,7 @@ footer {
     display: block;
     width: 100%;
     border: none;
-    background-color: $bg;
+    background-color: #dedede;
     margin: 10px 0;
     height: 60px;
     padding: 0 30px;
@@ -499,11 +588,10 @@ footer {
 
   &__btn {
     display: block;
-    background-color: $title;
+    background-color: #181515;
     color: #fff;
     border: none;
     box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
-    @extend%montserrat-500;
     padding: 14px 0;
     width: 100%;
     cursor: pointer;
@@ -511,7 +599,7 @@ footer {
     margin-bottom: 10px;
 
     &:hover {
-      color: $accent;
+      color: #e80000;
     }
   }
 }
@@ -532,9 +620,8 @@ footer {
 
   &__title {
     text-align: center;
-    color: $title;
+    color: #181515;
     font-size: 48px;
-    @extend%montserrat-700;
     letter-spacing: 4px;
     margin-bottom: 20px;
   }
@@ -548,15 +635,15 @@ footer {
     margin: 0 auto 70px;
     text-transform: uppercase;
     padding: 20px 10px;
-    color: $title;
+    color: #181515;
     font-size: 26px;
     width: 362px;
     height: 66px;
-    border: 1px solid $accent;
+    border: 1px solid #e80000;
 
     &:hover {
-      color: $accent;
-      border: 1px solid $accent;
+      color: #e80000;
+      border: 1px solid #e80000;
     }
   }
 }
@@ -564,11 +651,11 @@ footer {
 .product__title {
   display: block;
   max-width: 700px;
-  color: $title;
+  color: #181515;
   font-size: 40px;
   line-height: 55px;
   margin: 40px auto;
-  border-bottom: 1px solid $default;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 .product-items {
@@ -600,8 +687,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 20px;
-    background-color: $line;
-    color: $accent;
+    background-color: #d6d6d6;
+    color: #e80000;
     line-height: 45px;
     font-size: 20px;
     width: 200px;
@@ -612,7 +699,7 @@ footer {
     transform: translateY(300%);
 
     &:hover {
-      border: 2px solid $accent;
+      border: 2px solid #e80000;
     }
   }
 
@@ -627,13 +714,13 @@ footer {
   }
 
   &__title {
-    color: $title;
+    color: #181515;
     padding: 5px 0;
 
   }
 
   &__subtitle {
-    color: $title;
+    color: #181515;
     font-size: 20px;
 
   }
@@ -645,11 +732,11 @@ footer {
   }
 
   &__new-price {
-    color: $title;
+    color: #181515;
   }
 
   &__old-price {
-    color: $default;
+    color: #c6c6c6;
     text-decoration: line-through;
   }
 
@@ -657,9 +744,9 @@ footer {
     .product-item__img-box::before {
       content: "SALE";
       text-transform: uppercase;
-      color: $title;
+      color: #181515;
       display: inline-block;
-      background-color: $accent;
+      background-color: #e80000;
       padding: 5px 15px;
       position: absolute;
       top: 25px;
@@ -675,7 +762,7 @@ footer {
 }
 
 .about-product-small {
-  background-color: $line;
+  background-color: #d6d6d6;
   background-image: url(../images/src/product-small.jpg);
   background-repeat: no-repeat;
   background-size: 50%;
@@ -695,7 +782,7 @@ footer {
 
 
 .products {
-  background-color: $line;
+  background-color: #d6d6d6;
   margin: 40px 0 10px;
   min-height: 300px;
 
@@ -703,7 +790,7 @@ footer {
     margin-left: 200px;
     padding: 0 40px;
     max-width: 700px;
-    border-left: 2px solid $default;
+    border-left: 2px solid #c6c6c6;
   }
 
   &__title {
@@ -730,24 +817,23 @@ footer {
 
 .shop-content {
   &__filter {
-    border: 1px solid $line;
+    border: 1px solid #d6d6d6;
     padding: 20px 25px 20px 30px;
     margin: auto;
 
     &__btn {
       width: 297px;
       display: block;
-      border: 1px solid $default;
-      color: $default;
+      border: 1px solid #c6c6c6;
+      color: #c6c6c6;
       border: none;
       box-shadow: 0px 7px 20px 0px rgba(171, 60, 75, 0.2);
-      @extend%montserrat-500;
       padding: 14px;
       cursor: pointer;
 
       &:hover {
         color: #fff;
-        background-color: $accent;
+        background-color: #e80000;
       }
     }
   }
@@ -764,15 +850,14 @@ footer {
 .filter {
   &__item {
     padding: 35px 30px 40px;
-    border: 2px solid $line;
+    border: 2px solid #d6d6d6;
     margin-bottom: 25px;
   }
 
   &__title {
     text-transform: uppercase;
-    color: $title;
+    color: #181515;
     font-size: 22px;
-    @extend%montserrat-500;
     margin-bottom: 25px;
   }
 }
@@ -784,7 +869,7 @@ footer {
 
   &__input {
     border: none;
-    background-color: $bg;
+    background-color: #dedede;
     width: 260px;
     height: 50px;
     padding: 0 5px 0 15px;
@@ -793,7 +878,7 @@ footer {
   &__btn {
     margin-left: -2px;
     border: none;
-    background-color: $accent;
+    background-color: #e80000;
     width: 50px;
     height: 50px;
     display: flex;
@@ -814,7 +899,7 @@ footer {
 
   &__btn {
     border: none;
-    background-color: $accent;
+    background-color: #e80000;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 2px;
@@ -826,7 +911,7 @@ footer {
 .irs--flat .irs-line {
   top: 13px;
   height: 5px;
-  background-color: $bg;
+  background-color: #dedede;
   border-radius: 0;
 }
 
@@ -879,7 +964,7 @@ footer {
 
   &__title {
     margin-bottom: 20px;
-    color: $title;
+    color: #181515;
     font-size: 30px;
   }
 
@@ -896,13 +981,13 @@ footer {
   }
 
   &__price-new {
-    color: $accent;
+    color: #e80000;
     font-weight: bold;
   }
 
   &__price-old {
     margin-left: 20px;
-    color: $default;
+    color: #c6c6c6;
     text-decoration: line-through;
   }
 
@@ -916,13 +1001,11 @@ footer {
   }
 
   &__item-text {
-    @extend%oswald-500;
     margin-bottom: 15px;
-    color: $default;
+    color: #101010;
     font-size: 16px;
 
     span {
-      @extend%montserrat-500;
       display: block;
       margin-bottom: 10px;
       color: #000;
@@ -933,7 +1016,6 @@ footer {
 }
 
 .product-info {
-  &__list {}
 
   &__item {
     margin-bottom: 5px;
@@ -942,8 +1024,7 @@ footer {
 
   &__title {
     width: 200px;
-    @extend%montserrat-500;
-    color: $title;
+    color: #181515;
     margin-right: 30px;
   }
 }
@@ -982,10 +1063,11 @@ footer {
 
 .product-tabs {
   margin-top: 30px;
+  color: #101010;
 
   &__btn {
     border: none;
-    background-color: $accent;
+    background-color: #e80000;
     color: #fff;
     text-transform: uppercase;
     width: 270px;
@@ -996,8 +1078,8 @@ footer {
 
     &:hover {
       background-color: #fff;
-      color: $accent;
-      border: 1px solid $accent;
+      color: #e80000;
+      border: 1px solid #e80000;
     }
   }
 }
@@ -1017,29 +1099,29 @@ footer {
     overflow: hidden;
     clip: rest(0 0 0 0);
     position: absolute;
-&:checked{
-  & + .product-filter__color-checkbox{
-    border-color: $accent;
-  }
-}
+
+    &:checked {
+      &+.product-filter__color-checkbox {
+        border-color: #e80000;
+      }
+    }
   }
 
   &__color-title {
     margin-bottom: 5px;
     font-size: 18px;
-    color: $title;
-    @extend%montserrat-500;
-
+    color: #181515;
   }
 
   &__color-checkbox {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    border: 1px solid $line;
+    border: 1px solid #d6d6d6;
     position: relative;
-display: inline-block;
-    span{
+    display: inline-block;
+
+    span {
       content: '';
       position: absolute;
       width: 22px;
@@ -1050,5 +1132,3 @@ display: inline-block;
   }
 }
 
-
-@import 'media';
