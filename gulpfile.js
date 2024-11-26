@@ -1,5 +1,4 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
@@ -7,7 +6,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const webp = require('gulp-webp');
-//const avif = require('gulp-avif');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const fonter = require('gulp-fonter');
@@ -63,6 +61,7 @@ function scripts() {
   .pipe(browserSync.stream())
 }
 
+
 function styles() {
   return src('app/scss/style.scss')
   .pipe(concat('style.min.css'))
@@ -112,3 +111,4 @@ exports.building = building;
 exports.watching = watching;
 exports.build = series(cleanDist,building);
 exports.default = parallel(styles, scripts, pages, watching);
+

@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="px" viewBox="0 0 48 48"><path d="M41.68 9.219c-4.297-4.297-11.262-4.297-15.559 0L24 11.339l-2.121-2.12c-4.297-4.297-11.262-4.297-15.559 0-4.297 4.297-4.297 11.265 0 15.562l2.121 2.117L24 42.461l15.559-15.563 2.12-2.117c4.298-4.297 4.298-11.265 0-15.562zm0 0" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#000"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="px" viewBox="0 0 48 48" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 20.839844 4.609375 C 18.691406 2.460938 15.208984 2.460938 13.060547 4.609375 L 12 5.669922 L 10.939453 4.609375 C 8.791016 2.460938 5.308594 2.460938 3.160156 4.609375 C 1.011719 6.757812 1.011719 10.242188 3.160156 12.390625 L 4.220703 13.449219 L 12 21.230469 L 19.779297 13.449219 L 20.839844 12.390625 C 22.988281 10.242188 22.988281 6.757812 20.839844 4.609375 Z M 20.839844 4.609375 " transform="matrix(2,0,0,2,0,0)"/>
+</g>
+</svg>
